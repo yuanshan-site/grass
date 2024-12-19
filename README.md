@@ -164,3 +164,15 @@ MINING_MODE = True
 To register accounts, a captcha-solving service is required.  
 Captcha is not required in mining mode.
 
+
+### 6. docker run
+docker run -d \
+    --name grass \
+    -p 8080:80 \
+    -v ./data/accounts.txt:/grass/data/accounts.txt \
+    -v ./data/proxies.txt:/grass/data/proxies.txt \
+    -e MIN_PROXY_SCORE=0 \
+    -e SHOW_LOGS_RARELY=True \
+    -e ACCOUNTS_FILE_PATH="data/accounts.txt" \
+    -e PROXIES_FILE_PATH="data/proxies.txt" \
+    grass-ms:1.0
