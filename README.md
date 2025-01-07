@@ -164,8 +164,13 @@ MINING_MODE = True
 To register accounts, a captcha-solving service is required.  
 Captcha is not required in mining mode.
 
+### 6 docker build
 
-### 6. docker run
+```plaintext
+docker build -t grass-ms:1.0 .
+```
+
+### 7. docker run
 
 ```plaintext
 docker run -d --name grass \
